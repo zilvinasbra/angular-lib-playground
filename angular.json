@@ -3,5 +3,68 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "iamus-weather": {
+      "projectType": "library",
+      "root": "projects/iamus-weather",
+      "sourceRoot": "projects/iamus-weather/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/iamus-weather/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/iamus-weather/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/iamus-weather/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/iamus-weather/src/test.ts",
+            "tsConfig": "projects/iamus-weather/tsconfig.spec.json",
+            "karmaConfig": "projects/iamus-weather/karma.conf.js"
+          }
+        }
+      }
+    },
+    "iamus-date": {
+      "projectType": "library",
+      "root": "projects/iamus-date",
+      "sourceRoot": "projects/iamus-date/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/iamus-date/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/iamus-date/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/iamus-date/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/iamus-date/src/test.ts",
+            "tsConfig": "projects/iamus-date/tsconfig.spec.json",
+            "karmaConfig": "projects/iamus-date/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "iamus-weather"
 }

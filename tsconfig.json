@@ -7,6 +7,16 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
+    "paths": {
+      "iamus-date": [
+        "dist/iamus-date/iamus-date",
+        "dist/iamus-date"
+      ],
+      "iamus-weather": [
+        "dist/iamus-weather/iamus-weather",
+        "dist/iamus-weather"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
