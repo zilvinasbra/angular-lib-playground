@@ -13,7 +13,7 @@ import {CommonModule} from "@angular/common";
     CommonModule
   ],
   exports: [
-    IamusDateComponent
+    IamusDateComponent,
   ],
   providers: [IamusDateService]
 })
